@@ -6,11 +6,12 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import br.com.casadocodigo.loja.controller.HomeController;
+import br.com.casadocodigo.loja.dao.ProdutoDAO;
 
 @EnableWebMvc
 
-//configuracao automatica via busca do pacato atraves da classe
-@ComponentScan(basePackageClasses = {HomeController.class})
+//Os pacotes que o SPRING irá varrer, os pacotes...
+@ComponentScan(basePackageClasses = {HomeController.class, ProdutoDAO.class})
 public class AppWebConfiguration {
 
 	
